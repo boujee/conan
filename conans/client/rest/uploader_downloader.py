@@ -114,7 +114,7 @@ class Downloader(object):
         self.requester = requester
         self.verify = verify
 
-    def download(self, url, file_path=None, auth=None, retry=1, retry_wait=0, overwrite=False,
+    def download(self, url, file_path=None, auth=None, retry=10, retry_wait=5, overwrite=False,
                  headers=None):
 
         if file_path and not os.path.isabs(file_path):
